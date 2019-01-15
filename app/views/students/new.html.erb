@@ -1,3 +1,9 @@
+<% if flash[:error] != nil%>
+<% flash[:error].each do |error| %>
+<%= error %><br/>
+<% end %>
+<% end %>
+
 <h2>Add a New Student</h2>
 <%= form_for @student do |f| %>
 <%= f.label :name %>

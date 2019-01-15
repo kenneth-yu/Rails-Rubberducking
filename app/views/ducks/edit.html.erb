@@ -1,3 +1,9 @@
+<% if flash[:error] != nil%>
+<% flash[:error].each do |error| %>
+<%= error %> <br/>
+<% end %>
+<% end %>
+
 <h2>Edit Duck Details</h2>
 <%= form_for @duck do |f| %>
 <%= f.label :name %>

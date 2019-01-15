@@ -17,6 +17,7 @@ class StudentsController < ApplicationController
     if @student.valid?
       redirect_to @student
     else
+      flash[:error] = @student.errors.full_messages
       render :new
     end
   end
@@ -31,6 +32,7 @@ class StudentsController < ApplicationController
     if @student.valid?
       redirect_to @student
     else
+      flash[:error] = @student.errors.full_messages
       render :edit
     end
   end
