@@ -1,0 +1,7 @@
+<h2><%= @duck.name %></h2>
+<h2><%= @duck.description %></h2>
+<h2><%= @duck.student.name %></h2>
+
+<br/>
+<%= link_to "Edit Duck", edit_duck_path(@duck) %><br/>
+<%= link_to "Delete Duck", destroy_duck_path(@duck), method: :delete %>
