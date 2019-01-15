@@ -15,7 +15,6 @@ class DucksController < ApplicationController
 
   def create
     @duck = Duck.create(duck_params)
-    byebug
     if @duck.valid?
       redirect_to @duck
     else
